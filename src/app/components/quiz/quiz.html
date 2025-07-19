@@ -1,0 +1,26 @@
+<div class="start-container" *ngIf="!start && !error">
+  <h1>Welcome to BrainBlitz!</h1>
+  <p>Test your knowledge with fun and challenging questions.</p>
+  <button (click)="startQuiz()">Start Quiz</button>
+</div>
+
+<div class="quiz-container" *ngIf="!showResults && start">
+  <h1>BrainBlitz</h1>
+  <div class="question-card" *ngIf="!isLoading">
+    <h4>Question {{CurrentQuestionIndex}} of {{QuizQuestion.length}}</h4>
+    <p class="timer">Time Left : {{timer}} seconds</p>
+    <h2> {{ QuizQuestion[CurrentQuestionIndex].question }}</h2>
+    <ul>
+      <li *ngFor="let option of QuizQuestion[CurrentQuestionIndex].answers"
+        [class.selected]="selectedOptions === option" (click)="selectOption(option)">
+        {{option}}
+      </li>
+    </ul>
+    <button [disabled]="!selectedOptions" (click)="nextQuestion()">
+      {{CurrentQuestionIndex < QuizQuestion.length -1 ? 'Next' : 'Finish ' }} </button>
+  </div>
+</div>
+
+<div *ngIf="error" class="error-message">
+  {{ error }}
+</div>
