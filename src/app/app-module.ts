@@ -3,14 +3,20 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Quiz } from './components/quiz/quiz';
+import { Results } from './components/results/results';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Quiz,
+    Results
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
