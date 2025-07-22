@@ -1,6 +1,6 @@
 {
   "routes": {
-    "/": {},
-    "/results": {}
+    "/quiz-app": {},
+    "/quiz-app/results": {}
   }
 }

@@ -2,24 +2,24 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/',
+  baseHref: '/quiz-app/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "route": "/"
+    "route": "/quiz-app"
   },
   {
     "renderMode": 2,
-    "route": "/results"
+    "route": "/quiz-app/results"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 491, hash: 'fe01b8a0dca7fccbb1fbaa78defe9943afb54e87fe97b9c0336554a55495addf', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1004, hash: '827d30af00eedd0a42c909652dc16f2fbe11093727f9bff4370e71efaa918fb4', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'results/index.html': {size: 2305, hash: '14c5313c1fbd800de4b5d88d1d05d5afd1482e25e82830696cf347b458a87947', text: () => import('./assets-chunks/results_index_html.mjs').then(m => m.default)},
-    'index.html': {size: 7985, hash: 'e9a0c7f9ed21cdc8e87dfb382f12415e9e40b15fd7358e1730fb63c006ea88ba', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 500, hash: 'af7ce85010d140bb4a8c1fb3c3ba4bab3b0d757dc799e9e830e9f2adc5655404', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1013, hash: '4254f7d60ff51f4b3cd475a3b89fd6654a55b4efeeb51bc5dd4de803180f45ad', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'results/index.html': {size: 2314, hash: '1600e61e8e1842da72183ce9cb14b101db27649526bf0c23e7ba7f52be527ca8', text: () => import('./assets-chunks/results_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 8249, hash: '6586f77b692d302da23091bd442b6383aa395982ccbccac2430c2ef97b7904c5', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
     'styles-5INURTSO.css': {size: 0, hash: 'menYUTfbRu8', text: () => import('./assets-chunks/styles-5INURTSO_css.mjs').then(m => m.default)}
   },
 };

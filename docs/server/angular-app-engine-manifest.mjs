@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/quiz-app',
   supportedLocales: {
   "en-US": ""
 },

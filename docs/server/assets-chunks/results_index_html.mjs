@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <meta charset="utf-8">
   <title>QuizApp</title>
-  <base href="/">
+  <base href="/quiz-app/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="styles-5INURTSO.css"><style ng-app-id="ng">.results-container[_ngcontent-ng-c3736866020]{text-align:center;font-family:Arial,sans-serif;margin:2rem auto;max-width:500px;background:#f9f9f9;padding:2rem;border-radius:10px;box-shadow:0 4px 6px #0000001a}h1[_ngcontent-ng-c3736866020]{color:#4a90e2}p[_ngcontent-ng-c3736866020]{font-size:1.2rem;color:#333}button[_ngcontent-ng-c3736866020]{margin-top:1rem;padding:.75rem 1.5rem;background:#4a90e2;color:#fff;border:none;border-radius:5px;cursor:pointer;font-size:1rem;transition:background .3s}button[_ngcontent-ng-c3736866020]:hover{background:#3b78c6}</style></head>
