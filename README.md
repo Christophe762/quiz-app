@@ -1,63 +1,155 @@
-<<<<<<< HEAD
-# quiz-app
-=======
-# QuizApp
+# Quiz App 🎯
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+A simple quiz application built with **Angular** that fetches trivia questions from the **Open Trivia DB API**.
+This project was mainly created to practice **CI/CD workflows using GitHub Actions**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
+
+* Fetches trivia questions from the Open Trivia DB API
+* Multiple choice quiz format
+* Score tracking
+* Question Timer
+* Simple and responsive UI
+* Automated build workflow with GitHub Actions
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** Angular
+* **API:** Open Trivia DB
+* **CI/CD:** GitHub Actions
+* **Runtime:** Node.js
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/christophe762/quiz-app.git
+cd quiz-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and go to:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🧠 API Used
+
+This project uses the **Open Trivia Database API** to fetch quiz questions.
+
+Example request:
+
+```
+https://opentdb.com/api.php?amount=10&type=multiple
 ```
 
-## Building
+Documentation:
+https://opentdb.com/api_config.php
 
-To build the project run:
+---
 
-```bash
-ng build
+## ⚙️ CI/CD Pipeline
+
+This project includes a **GitHub Actions workflow** that automatically builds and tests the application when code is pushed to the `main` branch or when a pull request is opened.
+
+### Workflow Steps
+
+1. Checkout repository
+2. Setup Node.js
+3. Install dependencies
+4. Build the Angular application
+
+### GitHub Actions Workflow
+
+```yaml
+name: Build and Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build app
+      run: npm run build --if-present
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📁 Project Structure
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```
+quiz-app/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── models/
+│   │
+│   ├── assets/
+│   └── environments/
+│
+├── .github/
+│   └── workflows/
+│       └── main-ci.yml
+│
+├── package.json
+└── README.md
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🎯 Purpose of the Project
 
-```bash
-ng e2e
-```
+The goal of this project was to:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+* Implement **CI/CD using GitHub Actions**
+* Automate builds on push and pull requests
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> master
+## 🙌 Acknowledgments
+
+* Open Trivia DB for providing the trivia API
+* Angular framework
+* GitHub Actions for CI/CD automation
